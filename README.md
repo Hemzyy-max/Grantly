@@ -31,3 +31,7 @@ Connect the client to server-side route handlers/actions for authentication, CRU
 ## Deployment
 
 Deploy to Vercel or another Node-compatible Next.js host. Configure the two `NEXT_PUBLIC_SUPABASE_*` variables in the host settings, run the migration against the production database, and set a server-only AI key only if the grounded AI route is enabled.
+
+### GitHub Pages
+
+Pushing to `master` triggers `.github/workflows/deploy-pages.yml`, which creates a static public demo at `https://hemzyy-max.github.io/Grantly/`. In repository **Settings → Pages**, select **GitHub Actions** as the source if GitHub asks for a publishing source. The demo interface does not require environment variables; Supabase-backed authentication and uploads require a full Next.js server deployment such as Vercel.
